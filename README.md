@@ -1,0 +1,5 @@
+"# e-sodaqah" 
+"# e-sodaqah" 
+"# e-sodaqah" 
+"# sadaqah" 
+"# esadaqah" 
