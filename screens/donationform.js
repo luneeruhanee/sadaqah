@@ -45,14 +45,14 @@ export default class donationform extends React.Component {
               <Input />
             </Item>
             <Item floatingLabel last>
-              <Label>Donate name</Label>
+              <Label>Donor name</Label>
               <Input />
             </Item>
             <Button style={{marginTop:10}}
               full
               rounded
               success
-              onPress={() => Alert.alert('You have successful donate')}>
+              onPress={() => Alert.alert('You have successfully donate')}>
               <Text style={{color:'#fff'}}>Donate</Text>
              </Button>
           </Form>

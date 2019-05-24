@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TextInput } from 'react-native';
+//import { createStackNavigator, createAppContainer , Navigation,Navigate} from "react-navigation";
 import firebase from 'firebase';
 
 
@@ -33,7 +34,7 @@ signUpUser=(email, password)=> {
 try{
 
   if(this.state.password.length<6){
-    alert("please enter 6 digit")
+    alert("please enter the email and password for sign up")
     return;
   }
   firebase.auth().createUserWithEmailAndPassword(email,password)
@@ -57,7 +58,13 @@ loginUser=(email, password)=>{
   
   }
 }
-
+/*logout = () => {
+  firebase.auth().signOut().then(() => {
+    this.props.navigator.immediatelyResetStack([Router.getRoute('goodbye')], 0);
+  }).catch(function(error) {
+    // An error happened.
+  });
+}*/
   render() {
     return (
       <Container style={styles.container}>
@@ -84,7 +91,7 @@ loginUser=(email, password)=>{
     full
     rounded
     success
-    onPress={()=>this.loginUser(this.state.email,this.state.password)}
+    onPress={()=>this.loginUser(this.state.email,this.state.password,this.props.navigation.navigate('homepage'))}
     //onPress={() => this.props.navigation.navigate('homepage')}
     > 
     <Text style={{color:'#fff'}}>Login</Text>

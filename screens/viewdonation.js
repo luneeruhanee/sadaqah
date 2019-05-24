@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
-export default class viewdonation extends Component {
+export default class viewdonation extends React.Component {
+  static navigationOptions = {
+    title: 'All donate',
+  };
   render() {
     return (
       <Container>
@@ -18,7 +21,7 @@ export default class viewdonation extends Component {
                 <Text note numberOfLines={3}>Date:</Text>
               </Body>
               <Right>
-                <Button transparent>
+                <Button transparent >
                   <Text>REQUEST</Text>
                 </Button>
               </Right>
